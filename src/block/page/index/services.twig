@@ -1,0 +1,11 @@
+<div class="{{content_prefix}}panel  {{content_mod}}"  id="{{content_id}}">
+	<div class="{{content_prefix}}container container  is--default-page  {{content_mod}}">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading} %}
+		<div class="{{content_prefix}}grid-row  grid__row  is--columns-3">
+			{% include "../../common/card/card.twig" with {view: "preview", prefix:"card-item__", mod:"is--services", list: [{"heading":"Финансовое планирование", "img":[path.img,"/temp/services-card1.png"].join("")},{"heading":"Управление активами и капиталами", "img":[path.img,"/temp/services-card2.png"].join("")},{"heading":"Инвестирование капитала", "img":[path.img,"/temp/services-card3.png"].join("")},{"heading":"Разработка инвестиционных стратегий", "img":[path.img,"/temp/services-card4.png"].join("")},{"heading":"Налоговое планирование", "img":[path.img,"/temp/services-card5.png"].join("")},{"heading":"Антикризисный менеджмент инвестиционного бизнеса", "img":[path.img,"/temp/services-card6.png"].join("")}]} %}
+		</div>
+		<div class="{{content_prefix}}btn  {{content_mod}}  is--center">
+			{% include "../../common/button/btn.twig" with {view:"modal",prefix:"btn__", mod:"", target:"modal-form", name:"Подробнее об услугах", m_heading: "Узнать подробнее об услугах", m_heading_sm: "Мы перезвоним вам в ближайшее время", m_btn:"Отправить", } %}
+		</div>
+	</div>
+</div>

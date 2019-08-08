@@ -1,0 +1,62 @@
+<nav class="{{navbar_prefix}}block  {{navbar_mod}}" data-scrollto="navbar">
+	<div class="{{navbar_prefix}}header">
+		<div class="{{navbar_prefix}}container container  is--header">
+			<div class="{{navbar_prefix}}header-row row ">
+				<div class="{{navbar_prefix}}header-cols cols  is--hamburger">
+					<div class="{{navbar_prefix}}hamburger">
+						<button class="{{navbar_prefix}}hamburger-card" data-scrollto="humb" data-toggle="collapse" data-target="#bs-navbar-collapse" aria-expanded="false" data-toggle-nav=".navbar-site" data-body="html" data-collapse-nav=".navbar__collapse">
+							<span class="{{navbar_prefix}}hamburger-card-inner">
+								<span class="{{navbar_prefix}}hamburger-card-line  is--left"></span>
+								<span class="{{navbar_prefix}}hamburger-card-line  is--center"></span>
+								<span class="{{navbar_prefix}}hamburger-card-line  is--right"></span>
+							</span>
+						</button>
+					</div> 
+				</div>
+				<div class="{{navbar_prefix}}header-cols cols  is--logotip">
+					<a class="{{navbar_prefix}}logotip" href="{{page.index}}">
+						{% include "../svg-sprite/svg.twig" with {icon:"logotip"} %}
+					</a>
+				</div>
+				<div class="{{navbar_prefix}}header-cols cols  is--tel">
+					<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}phone-icon">{% include "../svg-sprite/svg.twig" with {icon:"contacts-tel"} %}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="{{navbar_prefix}}collapse" >
+		<div class="{{navbar_prefix}}container  container  is--collapse">
+			<div class="{{navbar_prefix}}collapse-inner">	
+				<div class="row {{navbar_prefix}}collapse-row">
+					<div class="{{navbar_prefix}}collapse-cols cols  is--left">
+						<a class="{{navbar_prefix}}logotip" href="{{page.index}}">
+							{% include "../svg-sprite/svg.twig" with {icon:"logotip"} %}
+						</a> 
+					</div>
+					<div class="{{navbar_prefix}}collapse-cols cols  is--center">
+						<ul class="{{navbar_prefix}}nav">
+							{% set navbar = [{"name":"Преимущества", "link":id.index.info,"mod":""},{"name":"О нас", "link":id.index.about,"mod":""},{"name":"Услуги", "link":id.index.services, "mod":"", "diff":"-100"},{"name":"Контакты", "link":id.index.contacts, "mod":""}] %}
+						    {% for value in navbar %}
+							<li class="{{navbar_prefix}}nav-item  {{value.mod }}"><a href="#{{value.link}}" class="{{navbar_prefix}}nav-link  scrollto" data-scrollto="nav-item" {% if value.diff != "" %}data-scrollto-diff="{{value.diff}}"{% endif %}><span>{{value.name}}</span></a></li>
+						    {% endfor %}
+						</ul>							
+					</div>
+					<div class="{{navbar_prefix}}collapse-cols cols  is--right">		
+						<div class="{{navbar_prefix}}contacts">		
+							<div class="{{navbar_prefix}}contacts-icon">
+								{% include "../svg-sprite/svg.twig" with {icon:"contacts-tel"} %}	
+							</div>	
+							<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}phone">{{contacts.phone}}</a>
+						</div>	
+						<div class="{{navbar_prefix}}contacts">		
+							<div class="{{navbar_prefix}}contacts-icon">
+								{% include "../svg-sprite/svg.twig" with {icon:"contacts-email"} %}	
+							</div>	
+							<a href="tel:{{contacts.phone_tel}}" class="{{navbar_prefix}}phone">{{contacts.email}}</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

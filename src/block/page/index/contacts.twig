@@ -1,0 +1,7 @@
+<div class="{{content_prefix}}panel  {{content_mod}}"  id="{{content_id}}">
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+	<div class="{{prefix.continfo}}block  {{content_mod}}">
+		{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading} %}
+		{% include "../../common/continfo/tpl.twig" with {prefix:"continfo__", mod:"is--contacts", list:[{"mod":"","name":"ИП Леонид Аркадьевич Полотовский", "tag":"div"},{"mod":"is--email","name":contacts.email, "href":contacts.email, "icon":"contacts-email", "tag":"a", "target":"mailto:"},{"mod":"is--tel","name":contacts.phone, "href":contacts.phone_tel, "icon":"contacts-tel", "tag":"a", "target":"tel:"},{"mod":"","name":"ИНН: 575306778902", "icon":"contacts-doc", "tag":"div"},{"mod":"","name":"ОГРНИП: 319574900017891", "icon":"contacts-doc", "tag":"div"}]} %} 
+	</div> 
+</div>

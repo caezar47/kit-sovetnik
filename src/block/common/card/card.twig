@@ -1,0 +1,23 @@
+{% if view == "info" %}
+{% for value in list %}		
+<div class="{{prefix}}card  {{mod}}"  style="background-image: url({{value.bg}})">
+	<div class="{{prefix}}heading-block  {{mod}}" data-num="{{value.num}}">	
+		<h3 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5>
+	</div>
+	<div class="{{prefix}}note  text__block  {{mod}}">
+		{{value.note}}
+	</div>
+</div> 
+{% endfor %}
+{% endif %}
+
+{% if view == "preview" %}
+{% for value in list %}		
+<div class="{{prefix}}card  {{mod}}">
+	<div class="{{prefix}}preview  {{mod}}">
+		<img src="{{value.img}}" alt="{{value.heading}}" class="img-responsive">
+	</div>
+	<h5 class="{{prefix}}heading  {{mod}}">{{value.heading}}</h5>	
+</div> 
+{% endfor %}
+{% endif %}

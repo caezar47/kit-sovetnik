@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>	
+    	{% include "../block/common/head/head.twig" with {title:"Леонид Полотовский - Финансовый консультант"}  %}
+	</head>
+	<body class="is--index-page">
+        <main class="content-block__wrap">
+        	{% include "../block/common/navbar/navbar.twig" with {navbar_prefix:"navbar__", navbar_mod:"is--scroll  is--index"} %}
+
+            {% include "../block/common/header/tpl.twig" with {content_prefix:"header-block__", content_id:id.index.header, heading:"Леонид Полотовский", heading_small:"Финансовый консультант", bg: [path.img,"/temp/bg-index-header.png"].join("")} %}
+     
+            {% include "../block/page/index/info.twig" with {content_prefix:"content-block__", content_mod:"is--index-info", content_id:id.index.info, bg: [path.img,"/temp/bg-info.png"].join("")} %} 
+
+            {% include "../block/page/index/about.twig" with {content_prefix:"content-block__", content_mod:"is--index-about", content_id:id.index.about, heading_group:"", heading_mod:"is--ff-2  is--h2  text-align--center", heading_level:"h2", heading:"О нас"} %}  
+
+            {% include "../block/page/index/services.twig" with {content_prefix:"content-block__", content_mod:"is--index-services", content_id:id.index.services, heading_group:"", heading_mod:"is--ff-2  is--h2  text-align--center", heading_level:"h2", heading:"Услуги"} %} 
+
+            {% include "../block/page/index/contacts.twig" with {content_prefix:"content-block__", content_mod:"is--index-contacts", content_id:id.index.contacts, heading_group:"is--gap-xs", heading_mod:"is--ff-2  is--h2  text-align--center", heading_level:"h2", heading:"Контакты"} %} 
+
+        	{% include "../block/common/footer/footer.twig" with {footer_prefix:"footer__"} %} 
+    	</main>
+
+        {% include "../block/common/modals/include.twig"%}
+    	{% include "../block/common/script/script.twig"%}
+    </body>
+</html> 
