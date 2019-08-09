@@ -44,10 +44,12 @@ $(function(){
 					.trigger('reset')
 					.empty()
 					.remove()
-				;*/				
+				;*/
+				/*
 				form
 					.trigger('reset')
-				;				
+				;	
+				*/			
 				form
 					.closest('.modals')
 						.modal('hide');									
