@@ -3,7 +3,7 @@
 	{% include "../../common/page-header/tpl.twig" with {heading_view:heading_view, prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading, level_sm:heading_sm_level, heading_sm:heading_sm} %}
 	<form action="#" class="{{prefix}}panel  {{mod}}  azbn7__api__form" data-form-validation>
 		<input type="hidden" name="key" value="londonisthecapitalofgreatbritain">
-		<input type="hidden" name="f[Форма: {{heading}}]" {% if heading_view == "modal" %}data-form-heading{% endif %}>
+		<input type="hidden" name="f[Форма]" {% if heading_view == "modal" %}data-form-heading{% endif %}> 
 		<div class="{{prefix}}grid-row  grid__row  {{mod}}">
 			{% if view == "default" %}
 				{% include "elem-tpl.twig" with {view: "input", prefix:prefix, mod:mod, color:color, list: [{"type":"text", "id":"name", "form_id":ID, "validate":"validate[required, custom[onlyLetterSp]]", "mod_elem":"grid__cols", "name":"Имя", "placeholder":"Введите ваше имя"},{"type":"text", "id":"email", "form_id":ID, "validate":"validate[required, custom[email]]", "mod_elem":"grid__cols", "name":"Email", "placeholder":"Введите ваш E-mail"},{"type":"tel", "id":"tel", "form_id":ID, "validate":"validate[required, custom[phone]]", "mod_elem":"grid__cols", "name":"Номер телефона", "placeholder":"Введите ваш номер телефона"}]} %}

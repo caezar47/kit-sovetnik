@@ -227,112 +227,6 @@
 	&item{
 	}
 }
-.card-item__{
-	&card{
-		position: relative;
-		display: block;
-		&.is--info{	
-			background-repeat: no-repeat;
-			background-position: bottom left;
-			@media @media-point-device {
-				background: none!important;
-			}
-			@media @media-point-screen {
-				padding-bottom: 18vw;
-			    margin-left: -9.6vw;
-    			padding-left: 9.6vw;
-			    margin-right: -9.6vw;
-    			padding-right: 9.6vw;
-				&:nth-child(1){
-					background-position: -47.1vw bottom;
-				}
-				&:nth-child(2){
-					background-position: 32.9vw bottom;
-				}
-			}
-			&:last-child{
-				padding-bottom: 0;
-			}
-		}
-		&.is--services{
-			border-radius: 10px;
-			background-color: #f8f8f8;
-			border: 2px solid #e0e0e0;
-		    padding: 30px;
-    		max-width: 400px;
-		}
-	} 
-	&preview{
-		display: block;
-		position: relative;
-		&.is--services{
-			margin-bottom: 20px;
-		}
-		svg{display: block;}
-	}
-	&heading-block{
-		&.is--info{
-			display: flex;
-			align-items: flex-end;
-			margin-bottom: 25px;
-			&::after{
-				content: attr(data-num);
-				color: fadeout(@primary, 85%); 
-				font-family: @b-ff-2;
-				font-size: 300px;
-				line-height: 220px;
-				.calcFontSize(180, 280, 320, 1680);
-				.calcLineHeight(100, 200, 320, 1680);
-			}
-			@media @media-point-screen {
-				max-width: 450px;
-			}
-		}
-	}
-	&heading{
-		transition: @trs-site;
-		&.is--info{
-			margin-bottom: 0
-		}
-		&.is--services{
-			font-family: @b-ff;
-			font-weight: 700;
-			margin-bottom: 0;
-		}
-	}
-	&heading-small{
-		transition: @trs-site;		
-	}	
-	&line{
-		flex-grow: 1;
-		margin: 0 15px;
-		border-bottom: 2px dotted @info;
-		@media @media-point-xxs {
-			display: none;
-		}
-	}
-	&date{	
-		display: block;
-		transition: @trs-site;
-		&.is--news{
-			margin-bottom: 5px;
-		}
-		&.is--reviews{
-			margin-bottom: 0;
-			color: @warning;
-			font-weight: 400;
-		}
-	}
-	&note{
-		&.is--info{	
-			max-width: 770px;
-		}
-	}
-	&btn{}
-	&elem-group{}
-	&elem{}
-	&elem-icon{}
-}
 .btn__{
 	&clearfix{
 		.btn-clearfix();
@@ -475,6 +369,112 @@
 		color: @success;	
 		svg{display: block;}
 	}
+}
+.card-item__{
+	&card{
+		position: relative;
+		display: block;
+		&.is--info{	
+			background-repeat: no-repeat;
+			background-position: bottom left;
+			@media @media-point-device {
+				background: none!important;
+			}
+			@media @media-point-screen {
+				padding-bottom: 18vw;
+			    margin-left: -9.6vw;
+    			padding-left: 9.6vw;
+			    margin-right: -9.6vw;
+    			padding-right: 9.6vw;
+				&:nth-child(1){
+					background-position: -47.1vw bottom;
+				}
+				&:nth-child(2){
+					background-position: 32.9vw bottom;
+				}
+			}
+			&:last-child{
+				padding-bottom: 0;
+			}
+		}
+		&.is--services{
+			border-radius: 10px;
+			background-color: #f8f8f8;
+			border: 2px solid #e0e0e0;
+		    padding: 30px;
+    		max-width: 400px;
+		}
+	} 
+	&preview{
+		display: block;
+		position: relative;
+		&.is--services{
+			margin-bottom: 20px;
+		}
+		svg{display: block;}
+	}
+	&heading-block{
+		&.is--info{
+			display: flex;
+			align-items: flex-end;
+			margin-bottom: 25px;
+			&::after{
+				content: attr(data-num);
+				color: fadeout(@primary, 85%); 
+				font-family: @b-ff-2;
+				font-size: 300px;
+				line-height: 220px;
+				.calcFontSize(180, 280, 320, 1680);
+				.calcLineHeight(100, 200, 320, 1680);
+			}
+			@media @media-point-screen {
+				max-width: 450px;
+			}
+		}
+	}
+	&heading{
+		transition: @trs-site;
+		&.is--info{
+			margin-bottom: 0
+		}
+		&.is--services{
+			font-family: @b-ff;
+			font-weight: 700;
+			margin-bottom: 0;
+		}
+	}
+	&heading-small{
+		transition: @trs-site;		
+	}	
+	&line{
+		flex-grow: 1;
+		margin: 0 15px;
+		border-bottom: 2px dotted @info;
+		@media @media-point-xxs {
+			display: none;
+		}
+	}
+	&date{	
+		display: block;
+		transition: @trs-site;
+		&.is--news{
+			margin-bottom: 5px;
+		}
+		&.is--reviews{
+			margin-bottom: 0;
+			color: @warning;
+			font-weight: 400;
+		}
+	}
+	&note{
+		&.is--info{	
+			max-width: 770px;
+		}
+	}
+	&btn{}
+	&elem-group{}
+	&elem{}
+	&elem-icon{}
 }
 .color-card__{
 	&view{

@@ -31,30 +31,30 @@ $(function(){
 			var method = form.attr('data-method') || 'formsave';
 			var form_mess = form.attr('data-message') || "#modal-message";
 
-			/*_form
+			_form
 				.append($('<input/>', {
 					type : 'hidden',
 					name : 'method',
 					value : method,
 				}))
-			;*/			
-			//new Azbn7__API__Request(_form.serialize(), function(resp){	
+			;	
+			new Azbn7__API__Request(_form.serialize(), function(resp){	
 
 				/*_form
 					.trigger('reset')
 					.empty()
 					.remove()
 				;*/
-				/*
+				
 				form
 					.trigger('reset')
-				;	
-				*/			
+				;
+							
 				form
 					.closest('.modals')
 						.modal('hide');									
 				$(form_mess).modal();					
-			//});				
+			});				
 		}			
 	});
 });

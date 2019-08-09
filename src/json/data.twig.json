@@ -49,7 +49,7 @@
 		"404":"/404.html",
 		"sitemap":"/sitemap.html",
 		"style":"/style.html",
-		"agreement":"/agreement.html"
+		"agreement":"/agreement.pdf" 
 	},
 	"prefix":{
 		"heading":"page-header__",
