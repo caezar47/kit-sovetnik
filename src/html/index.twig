@@ -15,7 +15,94 @@
 
             {% include "../block/page/index/services.twig" with {content_prefix:"content-block__", content_mod:"is--index-services", content_id:id.index.services, heading_group:"", heading_mod:"is--ff-2  is--h2  text-align--center", heading_level:"h2", heading:"Услуги"} %} 
 
-            {% include "../block/page/index/contacts.twig" with {content_prefix:"content-block__", content_mod:"is--index-contacts", content_id:id.index.contacts, heading_group:"is--gap-xs", heading_mod:"is--ff-2  is--h2  text-align--center", heading_level:"h2", heading:"Контакты"} %} 
+            {% include "../block/page/index/public.twig" with {
+                content_prefix:"content-block__", 
+                content_mod:"is--index-public", 
+                content_id:id.index.contacts, 
+                heading_group:"", 
+                heading_mod:"is--ff-2  is--h2  text-align--center",
+                heading_level:"h2", 
+                heading:"Информация, подлежащая обязательному раскрытию",
+                list_prefix: 'card-item__',
+                list_mod: 'is--public',
+                list_id: 'inform',
+                list: [
+                    {
+                        "list": [
+                            {
+                                id: '0',
+                                name: 'Полное фирменное наименование на русском языке',
+                                note: 'Индивидуальный предприниматель Полотовский Леонид Аркадьевич',
+                            },
+                            {
+                                id: '1',
+                                name: 'Сокращенное фирменное наименование на русском языке',
+                                note: 'ИП Полотовский Леонид Аркадьевич',
+                            },
+                            {
+                                id: '2',
+                                name: 'ИНН',
+                                note: '575306778902',
+                            },
+                            {
+                                id: '3',
+                                name: 'Адрес',
+                                note: 'Г. Орел, Набережная Дубровинского, д. 74, кв. 62-63',
+                            },
+                            {
+                                id: '9',
+                                name: 'Декларация о рисках',
+                                note: '<a href="/docs/risk-declaration.pdf" target="_blank">Скачать Декларацию о рисках</a>',
+                            },
+                            {
+                                id: '10',
+                                name: 'Договор об инвестиционном консультирования',
+                                note: '<a href="/docs/investment-agreement.pdf" target="_blank">Скачать Договор об инвестиционном консультирования</a>',
+                            },
+                        ]
+                    },
+                    {
+                        "list": [
+                            {
+                                id: '4',
+                                name: 'Информация о членстве в СРО',
+                                name: 'Информация о членстве в саморегулируемых организациях в сфере финансового рынка, объединяющих брокеров, дилеров, форекс-дилеров, управляющих, депозитариев, регистраторов (далее - СРО)',
+                                note: 'Является членом Национальной ассоциации участников фондового рынка (НАУФОР)',
+                            },
+                            {
+                                id: '5',
+                                name: 'Информация о стандартах СРО',
+                                note: 'Информация о стандартах СРО, которыми руководствуется профессиональный участник рынка ценных бумаг при осуществлении своей деятельности приведена на сайте СРО <a href="http://www.naufor.ru/" target="_blank">www.naufor.ru</a>',
+                            },
+                            {
+                                id: '6',
+                                name: 'Инвестиционное консультирование',
+                                note: 'Индивидуальный предприниматель Полотовский Леонид Аркадьевич внесен 05.10.2020 г. Центральным банком Российской Федерации (Банком России) в реестр инвестиционных советников. Данные доступны по адресу: <a href="http://www.cbr.ru/" target="_blank">www.cbr.ru</a>',
+                            },
+                            {
+                                id: '7',
+                                name: 'Надзор',
+                                note: 'Надзор за деятельностью ИП Полотовский Леонид Аркадьевич осуществляет Центральный Банк Российской Федерации. Телефоны Контактного центра Центрального банка Российской Федерации: 8-800-250-40-72, 8-495-771-91-00.',
+                            },
+                            {
+                                id: '8',
+                                name: 'Обращения (жалобы)',
+                                note: 'Обращение (жалобу) в адрес ИП Полотовский Леонид Аркадьевич можно направить по контактному адресу организации. Надзор за соблюдением требований законодательства Российской Федерации в сфере защиты прав потребителей финансовых услуг осуществляет Служба по защите прав потребителей и обеспечению доступности финансовых услуг Банка России. Обращение о нарушении действиями (бездействием) организации законодательства Российской Федерации, а также охраняемых законом прав и интересов физических или юридических лиц, может быть направлено для рассмотрения в Банк России через интернет-приемную (<a href="https://www.cbr.ru/Reception/" target="_black">www.cbr.ru/Reception</a>)',
+                            },
+                        ]
+                    },
+                ]
+            } %} 
+
+            {% include "../block/page/index/contacts.twig" with {
+                content_prefix:"content-block__", 
+                content_mod:"is--index-contacts", 
+                content_id:id.index.contacts, 
+                heading_group:"is--gap-xs", 
+                heading_mod:"is--ff-2  is--h2  text-align--center",
+                heading_level:"h2", 
+                heading:"Контакты"
+            } %} 
 
         	{% include "../block/common/footer/footer.twig" with {footer_prefix:"footer__"} %} 
     	</main>

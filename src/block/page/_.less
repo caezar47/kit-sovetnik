@@ -115,6 +115,9 @@
 					padding-bottom: 10vw;
 				}
 			}
+			&-public{	
+				padding-bottom: 0vw;
+			}
 			&-contacts{	
 				@media @media-point-screen {
 					//padding-top: 15vw;
@@ -224,6 +227,10 @@
 		} 
 		//page
 	}
-	&item{
+	&card{
+		&.is--index-public{
+			max-width: 1200px;
+			margin: 0 auto 30px;
+		}
 	}
 }

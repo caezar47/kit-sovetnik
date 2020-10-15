@@ -1,0 +1,22 @@
+<div class="{{content_prefix}}panel  {{content_mod}}"  id="{{content_id}}">
+	<div class="{{content_prefix}}container container  {{content_mod}}">
+		<div class="{{content_prefix}}card  {{content_mod}}">
+			{% include "../../common/page-header/tpl.twig" with {prefix:"page-header__", mod:heading_mod, group:heading_group, level:heading_level, heading:heading} %}
+
+			<div class="{{list_prefix}}group  panel-group  {{list_mod}}" id="{{list_id}}">
+				{% for v in list %}
+					<div>
+					{% for value in v.list %}
+						<div class="{{list_prefix}}card  panel  {{list_mod}}">
+							<a class="{{list_prefix}}heading  {{list_mod}}" data-toggle="collapse" data-parent="#{{list_id}}" href="#{{list_id}}{{value.id}}">{{value.name}}</a>
+							<div id="{{list_id}}{{value.id}}" class="collapse">
+								<div class="{{list_prefix}}note  {{list_mod}}">{{value.note}}</div>
+							</div>
+						</div>
+					{% endfor %}
+					</div>
+				{% endfor %}
+			</div>		
+		</div>
+	</div>
+</div>

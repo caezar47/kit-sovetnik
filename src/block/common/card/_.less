@@ -32,7 +32,22 @@
 		    padding: 30px;
     		max-width: 400px;
 		}
+		&.is--public{
+			border-radius: 10px;
+			background-color: #f8f8f8;
+			border: 2px solid #e0e0e0;
+			margin-bottom: 10px;			
+		}
 	} 
+	&group{
+		&.is--public{
+			display: grid;
+			@media (min-width: 768px){
+				grid-gap: 30px;		
+				grid-template-columns: 1fr 1fr;
+			}
+		}
+	}
 	&preview{
 		display: block;
 		position: relative;
@@ -70,6 +85,19 @@
 			font-weight: 700;
 			margin-bottom: 0;
 		}
+		&.is--public{
+			color: @primary;
+			padding: 10px 40px 10px 20px;
+			display: block;
+			font-family: @b-ff;
+			font-weight: 700;
+			.icon-drop-open();
+			background-position: center right 15px;
+			transition: @trs-site;
+			&[aria-expanded="true"]{
+				.icon-drop-close();
+			}		
+		}
 	}
 	&heading-small{
 		transition: @trs-site;		
@@ -97,6 +125,9 @@
 	&note{
 		&.is--info{	
 			max-width: 770px;
+		}
+		&.is--public{
+			padding: 10px 20px;		
 		}
 	}
 	&btn{}
